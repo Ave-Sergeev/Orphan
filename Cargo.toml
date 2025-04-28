@@ -1,0 +1,7 @@
+[package]
+name = "orphan"
+version = "0.1.0"
+authors = ["Artem Sergeev <...>"]
+edition = "2024"
+
+[dependencies]
