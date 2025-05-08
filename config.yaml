@@ -1,0 +1,37 @@
+# LogSetting
+logging:
+  log_level: INFO
+# InferenceSetting
+inference:
+  # The prompt to be used for image generation
+  prompt: "A pug dog holds a goldfish in its teeth"
+  # When set, use the CPU for the listed devices, can be 'all', 'unet', 'clip', 'vae'
+  cpu: []
+  # The height in pixels of the generated image
+  height: 512
+  # The width in pixels of the generated image
+  width: 512
+  # The UNet weight file, in .ot or .safetensors format
+  unet_weights: "model/unet.safetensors"
+  # The CLIP weight file, in .ot or .safetensors format
+  clip_weights: "model/clip.safetensors"
+  # The VAE weight file, in .ot or .safetensors format
+  vae_weights: "model/vae.safetensors"
+  # The file specifying the vocabulary to used for tokenization
+  vocab_file: "model/bpe_simple_vocab_16e6.txt"
+  # The size of the sliced attention or 0 for automatic slicing (disabled by default)
+  sliced_attention_size: 0
+  # The number of steps to run the diffusion for
+  n_steps: 30
+  # The random seed to be used for the generation
+  seed: 3934734
+  # The number of samples to generate
+  num_samples: 1
+  # The name of the final image to generate
+  final_image: "assets/output.png"
+  # Use autocast (disabled by default as it may use more memory in some cases)
+  autocast: false
+  # Version of `Stable Diffusion` model
+  sd_version: "2.1"
+  # Generate intermediary images at each step
+  intermediary_images: false
